@@ -1,0 +1,33 @@
+<div class="m-3">
+  <a class="btn btn-primary" href="#" role="button">Accueil</a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-l">
+      <div class="card">
+        <h5 class="card-header">Exercice 1</h5>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Username</th>
+                <th scope="col">Adresse mail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let user of userList; let row_no = index"
+                app-tp1-row
+                [id]="user.id"
+                [Username]="user.Username"
+                [AdresseMail]="user.AdresseMail"
+                [ngClass]="row_no % 2 === 0 ? 'table-success' : 'table-primary'"></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

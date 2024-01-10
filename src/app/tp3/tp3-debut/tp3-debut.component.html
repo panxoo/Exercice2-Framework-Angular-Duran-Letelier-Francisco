@@ -1,0 +1,31 @@
+<div class="m-3">
+  <a class="btn btn-primary" href="#" role="button">Accueil</a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <div class="card">
+        <h5 class="card-header">Exercice 3</h5>
+        <div class="card-body">
+          <div class="accordion" id="accordionExample">
+            <div *ngFor="let categorie of categories" class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + categorie.name" aria-expanded="true" [attr.aria-controls]="categorie.name">
+                  {{ categorie.name }}
+                </button>
+              </h2>
+              <div [id]="categorie.name" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let type of categorie.types">{{ type }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

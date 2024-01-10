@@ -1,0 +1,10 @@
+<div class="col-4 mt-5">
+  <div class="card" [ngClass]="statut === 'Présent' ? 'text-white bg-success' : statut === 'Absent' ? 'text-white bg-danger' : ''">
+    <h5 class="card-header">{{ (nom | uppercase) + ' ' + prenom }}</h5>
+    <div class="card-body">
+      <h5 class="card-text">{{ statut }}</h5>
+      <button (click)="onChangeStatut('Présent')" class="btn btn-primary me-4">Présent</button>
+      <button (click)="onChangeStatut('Absent')" class="btn btn-secondary">Absent</button>
+    </div>
+  </div>
+</div>

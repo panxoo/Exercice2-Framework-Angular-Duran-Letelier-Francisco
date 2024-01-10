@@ -1,0 +1,29 @@
+<div class="m-3">
+  <a class="btn btn-primary" href="#" role="button">Accueil</a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <div class="card">
+        <h5 class="card-header">Exercice 2</h5>
+        <div class="card-body">
+          <div class="row">
+            <h4>List Statut</h4>
+            <div class="col-4">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-secondary">Non déterminé</li>
+                <li class="list-group-item list-group-item-danger">Absent</li>
+                <li class="list-group-item list-group-item-success">Présent</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <app-tp2-card *ngFor="let user of userList" [id]="user.id" [nom]="user.nom" [prenom]="user.prenom" [statut]="user.statut"></app-tp2-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
